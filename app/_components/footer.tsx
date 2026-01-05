@@ -2,8 +2,10 @@ import type { FC } from 'react';
 
 export const Footer: FC = () => {
     return (
-        <footer style={{ background: 'lightsalmon', padding: 20 }}>
-            Powered by Nextra {new Date().getFullYear()}
-        </footer>
+        <div className='px-(--outer-padding) bg-(--head-foot-bg) mx-(--outer-margin)'>
+            <footer className='p-5'>
+                Powered by Nextra {new Date().getFullYear()}
+            </footer>
+        </div>
     );
 };

@@ -15,21 +15,11 @@ export const Sidebar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
 
     return (
         <div
-            style={{
-                background: 'lightgreen',
-                padding: 20
-            }}
+            className='p-5 bg-green-400'
         >
             <h3>Sidebar</h3>
             <ul
-                style={{
-                    margin: 0,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    listStyleType: 'none',
-                    padding: 0,
-                    gap: 20
-                }}
+                className='m-0 p-0 gap-5 flex flex-col list-none'
             >
                 {docsDirectories.map(function renderItem(item) {
                     const route =
@@ -38,7 +28,7 @@ export const Sidebar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
                     return (
                         <li
                             key={route}
-                            style={{ padding: '4px 4px 4px 10px', border: '1px solid' }}
+                            className='py-[4px] pr-[4px] pl-[10px] border-1 border-solid'
                         >
                             {'children' in item ? (
                                 <details>
@@ -46,7 +36,7 @@ export const Sidebar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
                                     {item.children.map(child => renderItem(child))}
                                 </details>
                             ) : (
-                                <Anchor href={route} style={{ textDecoration: 'none' }}>
+                                <Anchor href={route} className='decoration-solid'>
                                     {title}
                                 </Anchor>
                             )}

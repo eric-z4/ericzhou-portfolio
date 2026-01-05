@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ededed;
+  --foreground: #0a0a0a;
+  --head-foot-bg: #e8e8e8;
+  --outer-margin: 250px;
+  --outer-padding: 10px;
 }
 
 @theme inline {
@@ -13,10 +18,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+        --head-foot-bg: #212121;
+    }
 }
 
 body {
