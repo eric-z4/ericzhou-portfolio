@@ -9,7 +9,7 @@ export const NextraTheme: FC<{
 }> = ({ children, pageMap }) => {
     return (
         <div className='flex h-dvh basis-full'>
-            <div className='flex grow-(--sidebar-grow)'></div>
+            <div className='flex grow-(--sidebar-grow) bg-(--background-sides)'></div>
             <div className='flex flex-col h-full grow-(--main-grow)'>
                 <Navbar pageMap={pageMap} />
                 <div className='flex bg-(--background-page) px-(--outer-padding)'>
@@ -17,7 +17,7 @@ export const NextraTheme: FC<{
                 </div>
                 <Footer />
             </div>
-            <div className='flex grow-(--sidebar-grow)'></div>
+            <div className='flex grow-(--sidebar-grow) bg-(--background-sides)'></div>
         </div>
     );
 };

@@ -8,6 +8,9 @@ const meta = {
     portfolio: {
         title: 'Portfolio',
     },
+    resume: {
+        title: 'Resume',
+    },
     
 }
 

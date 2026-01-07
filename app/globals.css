@@ -1,13 +1,15 @@
 @import "tailwindcss";
+@import "./_fonts/noto_sans_font.css";
 
 :root {
     --background: #ededed;
     --background-page: #deeedd;
-    --foreground: #0a0a0a;
+    --background-sides: #e2e2e2;
     --head-foot-bg: #e8e8e8;
+    --foreground: #0a0a0a;
     --outer-padding: 10px;
     --sidebar-grow: 1;
-    --main-grow: 3;
+    --main-grow: 5;
 }
 
 @theme inline {
@@ -21,13 +23,38 @@
     :root {
         --background: #0a0a0a;
         --background-page: #111113;
-        --foreground: #ededed;
+        --background-sides: #191919;
         --head-foot-bg: #212121;
+        --foreground: #ededed;
     }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: "Noto Sans", sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 18px;
 }

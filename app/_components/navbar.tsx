@@ -14,7 +14,7 @@ export const Navbar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
     });
 
     return (
-        <div className='flex bg-(--head-foot-bg) px-(--outer-padding)'>
+        <div className='flex items-center bg-(--head-foot-bg) px-(--outer-padding)'>
             <h1 className='flex grow p-5 m-0'>Eric Zhou</h1>
             <ul
                 className='flex p-5 m-0 gap-5 list-none'
