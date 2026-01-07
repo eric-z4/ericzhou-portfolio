@@ -3,11 +3,12 @@ const meta = {
         type: 'page',
     },
     index: {
-        title: 'My Homepage',
+        title: 'Home',
     },
-    about: {
-        title: 'About',
+    portfolio: {
+        title: 'Portfolio',
     },
+    
 }
 
 export default meta;

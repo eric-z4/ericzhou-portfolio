@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
-@variant dark (&:where(.dark *));
-
 :root {
-  --background: #ededed;
-  --foreground: #0a0a0a;
-  --head-foot-bg: #e8e8e8;
-  --outer-margin: 250px;
-  --outer-padding: 10px;
+    --background: #ededed;
+    --background-page: #deeedd;
+    --foreground: #0a0a0a;
+    --head-foot-bg: #e8e8e8;
+    --outer-padding: 10px;
+    --sidebar-grow: 1;
+    --main-grow: 3;
 }
 
 @theme inline {
@@ -20,6 +20,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;
+        --background-page: #111113;
         --foreground: #ededed;
         --head-foot-bg: #212121;
     }

@@ -8,12 +8,16 @@ export const NextraTheme: FC<{
     pageMap: PageMapItem[];
 }> = ({ children, pageMap }) => {
     return (
-        <>
-            <Navbar pageMap={pageMap} />
-            <div className='flex px-(--outer-padding) mx-(--outer-margin)'>
-                {children}
+        <div className='flex h-dvh basis-full'>
+            <div className='flex grow-(--sidebar-grow)'></div>
+            <div className='flex flex-col h-full grow-(--main-grow)'>
+                <Navbar pageMap={pageMap} />
+                <div className='flex bg-(--background-page) px-(--outer-padding)'>
+                    {children}
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </>
+            <div className='flex grow-(--sidebar-grow)'></div>
+        </div>
     );
 };
