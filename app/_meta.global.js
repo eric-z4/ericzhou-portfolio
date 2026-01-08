@@ -3,10 +3,10 @@ const meta = {
         type: 'page',
     },
     index: {
-        title: 'Home',
+        title: 'Projects',
     },
-    portfolio: {
-        title: 'Portfolio',
+    about: {
+        title: 'About',
     },
     resume: {
         title: 'Resume',
