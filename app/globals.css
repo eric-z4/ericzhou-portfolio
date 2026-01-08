@@ -1,9 +1,11 @@
 @import "tailwindcss";
 @import "./_fonts/noto_sans_font.css";
+@import "./_fonts/neuton_font.css";
+@import "./_fonts/philosopher_font.css";
 
 :root {
     --background: #ededed;
-    --background-page: #deeedd;
+    --background-main: #f4fbf4;
     --background-sides: #e2e2e2;
     --head-foot-bg: #e8e8e8;
     --foreground: #0a0a0a;
@@ -22,7 +24,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;
-        --background-page: #111113;
+        --background-main: #111113;
         --background-sides: #191919;
         --head-foot-bg: #212121;
         --foreground: #ededed;
@@ -36,22 +38,25 @@ body {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 48px;
     font-weight: 600;
+    font-family: Neuton, serif;
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
+    font-family: Neuton, serif;
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 500;
+    font-family: Neuton, serif;
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
 }
 
