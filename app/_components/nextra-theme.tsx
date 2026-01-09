@@ -12,7 +12,7 @@ export const NextraTheme: FC<{
             <div className='hidden lg:flex basis-(--sidebar-basis) bg-(--background-sides)'></div>
             <div className='flex flex-col lg:basis-(--main-basis) basis-full'>
                 <Navbar pageMap={pageMap} />
-                <div className='flex grow bg-(--background-main) px-(--outer-padding)'>
+                <div className='flex grow py-2 bg-(--background-main) px-(--outer-padding)'>
                     {children}
                 </div>
                 <Footer />

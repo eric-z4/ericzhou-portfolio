@@ -15,9 +15,9 @@ export const Navbar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
 
     return (
         <div className='flex items-center bg-(--head-foot-bg) px-(--outer-padding)'>
-            <h2 className='flex grow shrink-0 p-5 m-0'><Link href='/'>Eric Zhou</Link></h2>
+            <h2 className='flex grow shrink-0 py-5 m-0'><Link href='/'>Eric Zhou</Link></h2>
             <ul
-                className='flex p-5 m-0 gap-5 list-none'
+                className='flex py-5 m-0 gap-5 list-none'
             >
                 {topLevelNavbarItems.map(item => {
                     const route = item.route || ('href' in item ? item.href! : '');
