@@ -4,7 +4,7 @@ const defaultComponents = getNextraComponents({
     wrapper({ children }) {
         return (
             <>
-                <div>{children}</div>
+                <div className="w-full">{children}</div>
             </>
         );
     }
