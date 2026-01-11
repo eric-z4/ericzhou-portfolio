@@ -4,7 +4,7 @@ import ProjectTemplate from './project_template.mdx';
 
 const ProjectWrapper: FC = () => {
     return (
-        <div className='flex py-5 gap-5'>
+        <div className='w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-auto py-5 gap-5'>
             {projects.map((item, i) => {
                 return (
                     <ProjectTemplate
