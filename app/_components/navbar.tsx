@@ -14,7 +14,7 @@ export const Navbar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
     });
 
     return (
-        <div className='flex items-baseline bg-(--head-foot-bg) px-(--outer-padding)'>
+        <div className='flex sticky top-0 items-baseline bg-(--head-foot-bg) px-(--outer-padding)'>
             <h2 className='flex grow shrink-0 py-3 md:py-5 m-0'><Link href='/'>Eric Zhou</Link></h2>
             <ul
                 className='flex py-3 md:py-5 m-0 gap-5 list-none'
