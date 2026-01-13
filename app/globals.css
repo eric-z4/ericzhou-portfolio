@@ -4,9 +4,8 @@
 @import "./_fonts/philosopher_font.css";
 
 :root {
-    --background: #ededed;
+    --background: #e8e8e8;
     --background-main: #fbfbf4;
-    --background-sides: #e8e8e8;
     --head-foot-bg: #e2e2e2;
     --foreground: #0a0a0a;
     --outer-padding: 1.25rem;
@@ -23,9 +22,8 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #0a0a0a;
+        --background: #191919;
         --background-main: #111113;
-        --background-sides: #191919;
         --head-foot-bg: #212121;
         --foreground: #ededed;
     }

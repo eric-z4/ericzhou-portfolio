@@ -1,5 +1,8 @@
 import Image from 'next/image'
 
-<div className='w-full content-center'>
-	<Image src={props.image} alt='' width={600} height={400} className='w-120 md:w-auto h-auto mx-auto' loading="eager" />
+<div className='relative aspect-square w-full sm:w-4/5 md:w-full overflow-hidden mx-auto bg-red-100 col-span-1 row-span-1'>
+	<Image src={props.image} alt='' fill={true} objectFit="cover" loading="eager" />
+	<div className='absolute inset-x-0 top-0 bg-(--background-main) opacity-80 p-1 text-sm'>
+		{props.title}
+	</div>
 </div>
