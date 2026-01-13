@@ -4,10 +4,10 @@
 @import "./_fonts/philosopher_font.css";
 
 :root {
-    --background: #e8e8e8;
+    --background: #ededed;
     --background-main: #fbfbf4;
+    --background-sides: #e8e8e8;
     --head-foot-bg: #e2e2e2;
-    --project-caption-bg: #ededed;
     --foreground: #0a0a0a;
     --outer-padding: 1.25rem;
     --sidebar-basis: 10%;
@@ -23,10 +23,10 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #191919;
+        --background: #0a0a0a;
         --background-main: #111113;
+        --background-sides: #191919;
         --head-foot-bg: #212121;
-        --project-caption-bg: #0a0a0a;
         --foreground: #ededed;
     }
 }

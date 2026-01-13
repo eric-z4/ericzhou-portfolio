@@ -1,10 +1,5 @@
 import Image from 'next/image'
 
-<div className='overflow-hidden sticky top-43 pb-5 bg-(--background-main)'>
-	<div className='relative w-fit mx-auto'>
-		<Image src={props.image} alt='' width={600} height={400} className='w-120 md:w-auto h-auto' loading="eager" />
-		<div className='absolute flex inset-x-0 top-0 h-8 bg-(--project-caption-bg) opacity-85 p-1 text-sm'>
-			{props.title}
-		</div>
-	</div>
+<div className='w-full content-center'>
+	<Image src={props.image} alt='' width={600} height={400} className='w-120 md:w-auto h-auto mx-auto' loading="eager" />
 </div>
