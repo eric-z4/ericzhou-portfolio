@@ -8,7 +8,6 @@ const ProjectWrapper: FC = () => {
     const [lastClickedDiv, setLastClickedDiv] = useState("");
 
     function handleProjectClick(text: string, index: number) {
-        console.log(lastClickedDiv + " / " + (text + index))
         if (lastClickedDiv === (text + index)) {
             alert(text);
         }
