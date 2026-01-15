@@ -7,6 +7,9 @@
     --background: #e8e8e8;
     --background-main: #fbfbf4;
     --head-foot-bg: #e2e2e2;
+    --project-fade: #111113;
+    --project-text: #ededed;
+    --project-outline: #110c00;
     --foreground: #0a0a0a;
     --outer-padding: 1.25rem;
     --sidebar-basis: 10%;
@@ -25,6 +28,7 @@
         --background: #191919;
         --background-main: #111113;
         --head-foot-bg: #212121;
+        --project-outline: #efe6f2;
         --foreground: #ededed;
     }
 }

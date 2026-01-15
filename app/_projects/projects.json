@@ -2,34 +2,42 @@
   "projects": [
     {
       "title": "UFO Scene",
+      "date": "1/14/2026",
       "image": "ufo_image.png"
     },
     {
       "title": "Sea City UEFN",
+      "date": "1/14/2026",
       "image": "sea_city.png"
     },
     {
       "title": "GradGraph",
+      "date": "1/14/2026",
       "image": "gradgraph.png"
     },
     {
       "title": "Talking Hands",
+      "date": "1/14/2026",
       "image": "textbox.jpg"
     },
     {
       "title": "Placeholder",
+      "date": "1/14/2026",
       "image": "ufo_image.png"
     },
     {
       "title": "dsavdsvajoiiw39285038*()#@*",
+      "date": "1/14/2026",
       "image": "sea_city.png"
     },
     {
       "title": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "date": "1/14/2026",
       "image": "gradgraph.png"
     },
     {
       "title": "Placeholder",
+      "date": "1/14/2026",
       "image": "textbox.jpg"
     }
   ]
