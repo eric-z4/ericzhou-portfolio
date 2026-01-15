@@ -1,19 +1,18 @@
 "use client";
 
-import type { FC } from 'react';
-import { useState } from 'react'
+import { useState, type FC } from 'react';
 
 export const Sidepanel: FC = () => {
-    const [leftVal, setLeftVal] = useState(16);
+    const [leftVal, setLeftVal] = useState(-16);
 
     function handleTabClick() {
-        setLeftVal(leftVal ^ 16);
+        setLeftVal(leftVal ^ -16);
     }
 
     return (
-        <div className={`fixed z-1 top-1/6 -left-${leftVal} w-16 h-2/3 transition-[left] delay-0 duration-200 ease-in-out`}>
+        <div className='fixed z-1 top-1/6 w-16 h-2/3 transition-[left] delay-0 duration-200 ease-in-out' style={{ left: `calc(var(--spacing) * ${leftVal})` }}>
             <div
-                className='absolute block rounded-r-lg top-85/100 -right-5 w-5 h-22 bg-(--sidepanel-bg) text-center'
+                className='absolute block rounded-r-lg bottom-4 -right-5 w-5 h-22 bg-(--sidepanel-bg) text-center select-none'
                 onClick={handleTabClick}
             >
                 &gt;
