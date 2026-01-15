@@ -9,21 +9,24 @@ const ProjectWrapper: FC = () => {
     const [isClickOnce, setIsClickOnce] = useState(false);
 
     function handleProjectClick(text: string, index: number) {
-        if (window.matchMedia('(pointer: coarse)').matches) {
-            if (lastClickedDiv === (text + index)) {
-                if (!isClickOnce) {
-                    setIsClickOnce(true);
+        if (typeof window !== undefined) {
+            if (matchMedia('(pointer: coarse)').matches) {
+                if (lastClickedDiv === (text + index)) {
+                    if (!isClickOnce) {
+                        setIsClickOnce(true);
+                    } else {
+                        alert(text);
+                    }
                 } else {
-                    alert(text);
+                    setIsClickOnce(false);
                 }
+                setLastClickedDiv(text + index);
             } else {
+                setLastClickedDiv("");
                 setIsClickOnce(false);
+                alert(text);
             }
-            setLastClickedDiv(text + index);
-        } else {
-            alert(text);
         }
-        
     }
 
     return (
@@ -33,7 +36,7 @@ const ProjectWrapper: FC = () => {
                     <div
                         id={item.title + i}
                         key={item.title + i}
-                        tabIndex={window.matchMedia('(pointer: fine)').matches ? -1 : 0} 
+                        tabIndex={(typeof window !== undefined) ? (matchMedia('(pointer: coarse)').matches ? 0 : -1) : -1}
                         className = 'relative group aspect-square w-full overflow-hidden mx-auto outline-3 outline-transparent hover:outline-(--project-outline) pointer-coarse:focus:outline-(--project-outline) transition-[outline-color] delay-0 duration-300 ease-in-out' 
                         onClick={() => handleProjectClick(item.title, i)}
                     >
@@ -52,7 +55,9 @@ const ProjectWrapper: FC = () => {
                             <p className='opacity-0 group-hover:opacity-100 pointer-coarse:group-focus:opacity-100 text-sm transition-opacity delay-0 duration-200 ease-in-out'>
                                 {item.date}
                             </p>
-                            <p className='opacity-0 group-hover:opacity-100 pointer-coarse:group-focus:opacity-100 wrap-break-word pt-4 text-sm transition-opacity delay-0 duration-200 ease-in-out'>{item.description}</p>
+                            <p className='opacity-0 group-hover:opacity-100 pointer-coarse:group-focus:opacity-100 wrap-break-word pt-4 text-sm transition-opacity delay-0 duration-200 ease-in-out'>
+                                {item.description}
+                            </p>
                         </div>
                     </div>
                 );
