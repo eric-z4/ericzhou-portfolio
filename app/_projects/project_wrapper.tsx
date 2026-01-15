@@ -21,7 +21,7 @@ const ProjectWrapper: FC = () => {
                     <div
                         id={item.title + i}
                         key={item.title + i}
-                        tabIndex={0}
+                        tabIndex={-1}
                         className = 'relative group aspect-square w-full overflow-hidden mx-auto outline-3 outline-transparent hover:outline-(--project-outline) focus:outline-(--project-outline) transition-[outline-color] delay-0 duration-300 ease-in-out' 
                         onClick={() => handleProjectClick(item.title, i)}
                     >
