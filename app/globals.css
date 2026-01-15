@@ -6,11 +6,13 @@
 :root {
     --background: #e8e8e8;
     --background-main: #fbfbf4;
+    --sidepanel-bg: #b2b2b2;
     --head-foot-bg: #e2e2e2;
     --project-fade: #111113;
     --project-text: #ededed;
     --project-outline: #110c00;
-    --foreground: #0a0a0a;
+    --midground: #b7b7b7;
+    --foreground: #282828;
     --outer-padding: 1.25rem;
     --sidebar-basis: 10%;
     --main-basis: 80%;
@@ -27,9 +29,11 @@
     :root {
         --background: #191919;
         --background-main: #111113;
+        --sidepanel-bg: #444444;
         --head-foot-bg: #212121;
         --project-outline: #efe6f2;
-        --foreground: #ededed;
+        --midground: #373737;
+        --foreground: #cecece;
     }
 }
 
@@ -39,29 +43,34 @@ body {
     font-family: "Noto Sans", sans-serif;
 }
 
+hr {
+    color: var(--midground);
+    border-top-width: 2px;
+}
+
 h1 {
-    font-size: 48px;
+    font-size: var(--text-5xl);
     font-weight: 600;
     font-family: Neuton, serif;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: var(--text-4xl);
     font-weight: 600;
     font-family: Neuton, serif;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: var(--text-2xl);
     font-weight: 500;
     font-family: Neuton, serif;
 }
 
 h4 {
-    font-size: 22px;
+    font-size: var(--text-xl);
     font-weight: 500;
 }
 
 h5 {
-    font-size: 18px;
+    font-size: var(--text-lg);
 }
