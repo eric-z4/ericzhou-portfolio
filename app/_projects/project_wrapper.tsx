@@ -9,7 +9,7 @@ const ProjectWrapper: FC = () => {
     const [isClickOnce, setIsClickOnce] = useState(false);
 
     function handleProjectClick(text: string, index: number) {
-        if (matchMedia('(pointer: coarse)').matches) {
+        if (window.matchMedia('(pointer: coarse)').matches) {
             if (lastClickedDiv === (text + index)) {
                 if (!isClickOnce) {
                     setIsClickOnce(true);
@@ -33,7 +33,7 @@ const ProjectWrapper: FC = () => {
                     <div
                         id={item.title + i}
                         key={item.title + i}
-                        tabIndex={matchMedia('(pointer: fine)').matches ? -1 : 0} 
+                        tabIndex={window.matchMedia('(pointer: fine)').matches ? -1 : 0} 
                         className = 'relative group aspect-square w-full overflow-hidden mx-auto outline-3 outline-transparent hover:outline-(--project-outline) pointer-coarse:focus:outline-(--project-outline) transition-[outline-color] delay-0 duration-300 ease-in-out' 
                         onClick={() => handleProjectClick(item.title, i)}
                     >
