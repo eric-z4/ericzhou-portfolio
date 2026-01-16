@@ -4,6 +4,7 @@ import { Footer } from './footer';
 import { Navbar } from './navbar';
 import { Sidepanel } from './sidepanel';
 
+
 export const NextraTheme: FC<{
     children: ReactNode;
     pageMap: PageMapItem[];

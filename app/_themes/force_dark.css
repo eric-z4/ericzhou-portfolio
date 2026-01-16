@@ -1,0 +1,31 @@
+:root#force-dark {
+    --background: #191919;
+    --background-main: #111113;
+    --sidepanel-bg: #444444;
+    --head-foot-bg: #212121;
+    --project-fade: #111113;
+    --project-text: #ededed;
+    --project-outline: #efe6f2;
+    --midground: #373737;
+    --foreground: #cecece;
+    --outer-padding: 1.25rem;
+    --sidebar-basis: 10%;
+    --main-basis: 80%;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root#force-dark {
+        --background: #191919;
+        --background-main: #111113;
+        --sidepanel-bg: #444444;
+        --head-foot-bg: #212121;
+        --project-fade: #111113;
+        --project-text: #ededed;
+        --project-outline: #efe6f2;
+        --midground: #373737;
+        --foreground: #cecece;
+        --outer-padding: 1.25rem;
+        --sidebar-basis: 10%;
+        --main-basis: 80%;
+    }
+}

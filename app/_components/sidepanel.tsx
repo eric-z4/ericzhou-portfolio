@@ -9,6 +9,10 @@ export const Sidepanel: FC = () => {
         setLeftVal(leftVal ^ -16);
     }
 
+    function handleThemeChangeClick(newTheme: string) {
+        document.documentElement.id = newTheme;
+    }
+
     return (
         <div className='fixed z-1 top-1/6 w-16 h-2/3 transition-[left] delay-0 duration-200 ease-in-out' style={{ left: `calc(var(--spacing) * ${leftVal})` }}>
             <div
@@ -18,11 +22,22 @@ export const Sidepanel: FC = () => {
                 &gt;
             </div>
             <div className='relative h-full'>
-                <div className='absolute bottom-0 flex flex-col-reverse w-16 gap-3 p-2 bg-(--sidepanel-bg) overflow-hidden'>
-                    <div className='flex aspect-square rounded-full border-2 border-black bg-blue-100'></div>
-                    <div className='flex aspect-square rounded-full border-2 border-black bg-blue-100'></div>
-                    <div className='flex aspect-square rounded-full border-2 border-black bg-green-100'></div>
-                    <div className='flex aspect-square rounded-full border-2 border-black bg-green-100'></div>
+                <div className='absolute bottom-0 flex flex-col-reverse w-16 rounded-r-lg gap-3 p-2 bg-(--sidepanel-bg) overflow-hidden'>
+                    <div
+                        className='flex aspect-square rounded-full border-2 border-black bg-linear-to-br from-zinc-300 from-48% to-zinc-800 to-52%'
+                        onClick={() => handleThemeChangeClick("")}
+                    >
+                    </div>
+                    <div
+                        className='flex aspect-square rounded-full border-2 border-black bg-radial-[at_25%_25%] from-zinc-600 from-45% to-zinc-900 to-50%'
+                        onClick={() => handleThemeChangeClick("force-dark")}
+                    >
+                    </div>
+                    <div
+                        className='flex aspect-square rounded-full border-2 border-black bg-radial-[at_25%_25%] from-white from-45% to-zinc-400 to-50%'
+                        onClick={() => handleThemeChangeClick("force-light")}
+                    >
+                    </div>
                 </div>
             </div>
         </div>
