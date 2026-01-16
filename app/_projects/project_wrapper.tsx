@@ -8,10 +8,14 @@ const ProjectWrapper: FC = () => {
     const [lastClickedDiv, setLastClickedDiv] = useState("");
 
     function handleProjectClick(text: string, index: number) {
-        if (lastClickedDiv === (text + index)) {
+        if (matchMedia('(pointer: fine)').matches) {
             alert(text);
+        } else {
+            if (lastClickedDiv === (text + index)) {
+                alert(text);
+            }
+            setLastClickedDiv(text + index);
         }
-        setLastClickedDiv(text + index);
     }
 
     return (
