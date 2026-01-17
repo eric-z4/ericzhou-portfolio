@@ -5,12 +5,9 @@
     --head-foot-bg: #e2e2e2;
     --project-fade: #111113;
     --project-text: #ededed;
-    --project-outline: #110c00;
     --midground: #b7b7b7;
-    --foreground: #282828;
-    --outer-padding: 1.25rem;
-    --sidebar-basis: 10%;
-    --main-basis: 80%;
+    --foreground-primary: #14600e;
+    --foreground-base: #282828;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,13 +16,8 @@
         --background-main: #fbfbf4;
         --sidepanel-bg: #b2b2b2;
         --head-foot-bg: #e2e2e2;
-        --project-fade: #111113;
-        --project-text: #ededed;
-        --project-outline: #110c00;
         --midground: #b7b7b7;
-        --foreground: #282828;
-        --outer-padding: 1.25rem;
-        --sidebar-basis: 10%;
-        --main-basis: 80%;
+        --foreground-primary: #14600e;
+        --foreground-base: #282828;
     }
 }

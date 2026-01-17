@@ -18,7 +18,7 @@ const RootLayout: FC<{ children: ReactNode; }> = async ({ children }) => {
 
     return (
         <html id="" lang="en" dir="ltr">
-            <body className='m-0'>
+            <body className='m-0 bg-(--background) text-(--foreground-base) font-["Noto Sans", sans-serif]'>
                 <NextraTheme pageMap={pageMap}>{children}</NextraTheme>
             </body>
         </html>

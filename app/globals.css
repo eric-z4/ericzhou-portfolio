@@ -10,9 +10,9 @@
     --head-foot-bg: #e2e2e2;
     --project-fade: #111113;
     --project-text: #ededed;
-    --project-outline: #110c00;
     --midground: #b7b7b7;
-    --foreground: #282828;
+    --foreground-primary: #14600e;
+    --foreground-base: #282828;
     --outer-padding: 1.25rem;
     --sidebar-basis: 10%;
     --main-basis: 80%;
@@ -31,16 +31,10 @@
         --background-main: #111113;
         --sidepanel-bg: #444444;
         --head-foot-bg: #212121;
-        --project-outline: #efe6f2;
         --midground: #373737;
-        --foreground: #cecece;
+        --foreground-primary: #b3ffc3;
+        --foreground-base: #cecece;
     }
-}
-
-body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: "Noto Sans", sans-serif;
 }
 
 hr {

@@ -1,0 +1,16 @@
+{
+  "themes": [
+    {
+      "name": "",
+      "classBg": "bg-linear-to-br from-zinc-300 from-48% to-zinc-800 to-52%"
+    },
+    {
+      "name": "force-dark",
+      "classBg": "bg-radial-[at_25%_25%] from-zinc-600 from-45% to-zinc-900 to-50%"
+    },
+    {
+      "name": "force-light",
+      "classBg": "bg-radial-[at_25%_25%] from-white from-45% to-zinc-400 to-50%"
+    }
+  ]
+}
