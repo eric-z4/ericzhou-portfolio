@@ -1,0 +1,18 @@
+@theme {
+    --animate-small-ping: small-ping 1s cubic-bezier(0.0, 0.0, 0.2, 1.0) infinite;
+
+    @keyframes small-ping {
+        75%, 100% {
+            transform: scale(1.3);
+            opacity: 0;
+        }
+    }
+
+    --animate-slow-spin: slow-spin 3s linear infinite;
+
+    @keyframes slow-spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

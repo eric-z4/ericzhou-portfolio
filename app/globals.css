@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "./_animations/global_anims.css";
+@import "./_themes/force_dark.css";
+@import "./_themes/force_light.css";
 @import "./_fonts/noto_sans_font.css";
 @import "./_fonts/neuton_font.css";
 @import "./_fonts/philosopher_font.css";
