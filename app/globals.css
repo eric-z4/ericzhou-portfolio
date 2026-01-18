@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "./_animations/global_anims.css";
+@import "./global_anims.css";
 @import "./_themes/force_dark.css";
 @import "./_themes/force_light.css";
 @import "./_fonts/noto_sans_font.css";
