@@ -22,7 +22,7 @@ const ProjectOverview: FC = () => {
 
     return (
         <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr py-5 gap-3'>
-            {projects.map((item, i) => {
+            {projects.sort((a, b) => Date.parse(b.date) - Date.parse(a.date)).map((item, i) => {
                 return (
                     <Link key={item.title + i} href={'/' + item.route} onNavigate={(e) => handleNavigateClick(e, item.title, i)}>
                         <div
@@ -44,14 +44,17 @@ const ProjectOverview: FC = () => {
                                 </h4>
                                 <hr className={`my-2 ${detailHoverFade} ${detailTransitionProps}`}></hr>
                                 <p className={`text-sm ${detailHoverFade} ${detailTransitionProps}`}>
-                                    {item.date}
+                                    {new Date(item.date).toLocaleDateString()}
                                 </p>
                                 <p className={`wrap-break-word pt-4 text-sm ${detailHoverFade} ${detailTransitionProps}`}>
                                     {item.description}
                                 </p>
+                                <p className={`wrap-break-word pt-4 text-sm ${detailHoverFade} ${detailTransitionProps}`}>
+                                    ---
+                                </p>
                             </div>
-                            <div className={`pointer-fine:hidden absolute w-full text-center bottom-1/8 ${detailHoverFade} ${detailTransitionProps}`}>
-                                <p className='text-sm'>Click/tap again for more details</p>
+                            <div className={`absolute w-full text-center bottom-1/8 ${detailHoverFade} ${detailTransitionProps}`}>
+                                <p className='text-sm'>Click/tap <span className='pointer-fine:hidden'>again</span> for more details</p>
                             </div>
                         </div>
                     </Link>

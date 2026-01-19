@@ -5,7 +5,7 @@ import { themes } from '../_themes/themes.json';
 
 export const SidepanelThemeButton: FC<{ bg: string, themeName: string, tooltip: string, toggleTooltip: string; }> = ({ bg, themeName, tooltip, toggleTooltip }) => {
     const circularDiv: string = "flex aspect-square rounded-full relative";
-    const circularInput: string = "w-full h-full m-0 aspect-square rounded-full appearance-none cursor-pointer";
+    const circularInput: string = "w-full m-0 aspect-square rounded-full appearance-none cursor-pointer";
     const borderDiv: string = "border-2 border-black";
     const borderInput: string = "opacity-0 checked:opacity-100 hover:not-checked:opacity-100 border-2 border-(--foreground-primary) checked:border-y-(--foreground-primary) checked:border-x-transparent transition-opacity duration-400";
     const tooltipClass: string = "absolute w-max p-1 top-1/2 left-[125%] -translate-y-1/2 bg-black rounded-sm text-sm select-none";

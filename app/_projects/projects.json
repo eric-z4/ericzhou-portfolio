@@ -1,59 +1,31 @@
 {
   "projects": [
     {
-      "title": "UFO Scene",
+      "title": "Particles and UFO Animation",
       "route": "ufo_project",
-      "date": "1/14/2026",
-      "description": "An animation created using Maya and python code",
+      "date": "2025-4-11",
+      "description": "An animation created by using Maya and python code to generate and keyframe polygons (like particles). It features simple clouds, asteroid fields, and procedural trees. Other non-particle elements were created and animated by hand.",
       "thumbnail": "ufo_image.png"
     },
     {
-      "title": "Sea City UEFN",
-      "route": "sea_city_project",
-      "date": "1/14/2026",
-      "description": "A world building art project using Unreal Engine in Fortnite",
-      "thumbnail": "sea_city.png"
+      "title": "Hole in the Canoe",
+      "route": "hole_in_the_canoe",
+      "date": "2025-10-27",
+      "description": "A Unity game that was made for the CyberCANOE, a 2D/stereoscopic 3D screen developed by Jason Leigh and the LAVA lab. It is a recreation of \"Hole in the Wall\" that uses Vive controllers and trackers to keep track of the position of the player's limbs.",
+      "thumbnail": "hole_canoe.png"
     },
     {
       "title": "GradGraph",
       "route": "gradgraph",
-      "date": "1/14/2026",
-      "description": "Website that visualizes the awarded degree trends and breakdown of three UH campuses",
+      "date": "2025-10-24",
+      "description": "A website that visualizes the awarded degree trends and breakdown of three University of Hawaii (UH) campuses. The website utilizes charts from Apache ECharts and Plotly.js.",
       "thumbnail": "gradgraph.png"
     },
     {
       "title": "Talking Hands",
       "route": "talking_hands",
-      "date": "1/14/2026",
-      "description": "An AR app prototype for training/translating the ASL alphabet",
-      "thumbnail": "textbox.jpg"
-    },
-    {
-      "title": "Placeholder",
-      "route": "placeholder",
-      "date": "1/14/2026",
-      "description": "Some description here",
-      "thumbnail": "ufo_image.png"
-    },
-    {
-      "title": "dsavdsvajoiiw39285038*()#@*",
-      "route": "placeholder",
-      "date": "1/14/2026",
-      "description": "12890483",
-      "thumbnail": "sea_city.png"
-    },
-    {
-      "title": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-      "route": "placeholder",
-      "date": "1/14/2026",
-      "description": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-      "thumbnail": "gradgraph.png"
-    },
-    {
-      "title": "Placeholder",
-      "route": "placeholder",
-      "date": "1/14/2026",
-      "description": "Placeholder",
+      "date": "2025-9-20",
+      "description": "An AR app prototype for training/translating the ASL alphabet. The app was made in Unity with the Meta XR SDK and Unity's XR Hands package.",
       "thumbnail": "textbox.jpg"
     }
   ]
