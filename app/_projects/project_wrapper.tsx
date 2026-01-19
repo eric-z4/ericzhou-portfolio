@@ -5,19 +5,15 @@ import { projects } from './projects.json';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ProjectWrapper: FC = () => {
+const ProjectOverview: FC = () => {
     const detailHoverFade: string = "opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity";
     const gradientBg: string = "bg-linear-to-b from-(--project-fade) from-10% group-hover:from-90% group-focus:from-90% to-transparent to-70% group-hover:to-100% group-focus:to-100%";
     const detailTransitionProps: string = "delay-0 duration-200 ease-in-out";
     const [lastClickedDiv, setLastClickedDiv] = useState("");
 
     function handleNavigateClick(e: {preventDefault: () => void}, text: string, index: number) {
-        if (matchMedia('(pointer: fine)').matches) {
-            console.log(text);
-        } else {
-            if (lastClickedDiv === (text + index)) {
-                console.log(text);
-            } else {
+        if (!matchMedia('(pointer: fine)').matches) {
+            if (lastClickedDiv !== (text + index)) {
                 e.preventDefault();
             }
             setLastClickedDiv(text + index);
@@ -28,7 +24,7 @@ const ProjectWrapper: FC = () => {
         <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr py-5 gap-3'>
             {projects.map((item, i) => {
                 return (
-                    <Link key={item.title + i} href={item.route} onNavigate={(e) => handleNavigateClick(e, item.title, i)}>
+                    <Link key={item.title + i} href={'/' + item.route} onNavigate={(e) => handleNavigateClick(e, item.title, i)}>
                         <div
                             id={item.title + i}
                             tabIndex={-1}
@@ -66,4 +62,4 @@ const ProjectWrapper: FC = () => {
     );
 };
 
-export default ProjectWrapper;
+export default ProjectOverview;

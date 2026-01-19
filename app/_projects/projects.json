@@ -2,56 +2,56 @@
   "projects": [
     {
       "title": "UFO Scene",
-      "route": "/ufo_test",
+      "route": "ufo_project",
       "date": "1/14/2026",
       "description": "An animation created using Maya and python code",
       "thumbnail": "ufo_image.png"
     },
     {
       "title": "Sea City UEFN",
-      "route": "/ufo_test",
+      "route": "sea_city_project",
       "date": "1/14/2026",
       "description": "A world building art project using Unreal Engine in Fortnite",
       "thumbnail": "sea_city.png"
     },
     {
       "title": "GradGraph",
-      "route": "/ufo_test",
+      "route": "gradgraph",
       "date": "1/14/2026",
       "description": "Website that visualizes the awarded degree trends and breakdown of three UH campuses",
       "thumbnail": "gradgraph.png"
     },
     {
       "title": "Talking Hands",
-      "route": "/ufo_test",
+      "route": "talking_hands",
       "date": "1/14/2026",
       "description": "An AR app prototype for training/translating the ASL alphabet",
       "thumbnail": "textbox.jpg"
     },
     {
       "title": "Placeholder",
-      "route": "/ufo_test",
+      "route": "placeholder",
       "date": "1/14/2026",
       "description": "Some description here",
       "thumbnail": "ufo_image.png"
     },
     {
       "title": "dsavdsvajoiiw39285038*()#@*",
-      "route": "/ufo_test",
+      "route": "placeholder",
       "date": "1/14/2026",
       "description": "12890483",
       "thumbnail": "sea_city.png"
     },
     {
       "title": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-      "route": "/ufo_test",
+      "route": "placeholder",
       "date": "1/14/2026",
       "description": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
       "thumbnail": "gradgraph.png"
     },
     {
       "title": "Placeholder",
-      "route": "/ufo_test",
+      "route": "placeholder",
       "date": "1/14/2026",
       "description": "Placeholder",
       "thumbnail": "textbox.jpg"
