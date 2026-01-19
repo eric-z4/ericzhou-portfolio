@@ -8,7 +8,7 @@ import Link from 'next/link';
 const ProjectOverview: FC = () => {
     const detailHoverFade: string = "opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity";
     const gradientBg: string = "bg-linear-to-b from-(--project-fade) from-10% group-hover:from-90% group-focus:from-90% to-transparent to-70% group-hover:to-100% group-focus:to-100%";
-    const detailTransitionProps: string = "delay-0 duration-200 ease-in-out";
+    const detailTransitionProps: string = "duration-200 ease-in-out";
     const [lastClickedDiv, setLastClickedDiv] = useState("");
 
     function handleNavigateClick(e: {preventDefault: () => void}, text: string, index: number) {
@@ -28,7 +28,7 @@ const ProjectOverview: FC = () => {
                         <div
                             id={item.title + i}
                             tabIndex={-1}
-                            className='relative group aspect-square w-full overflow-hidden mx-auto outline-3 outline-transparent hover:outline-(--foreground-primary) focus:outline-(--foreground-primary) transition-[outline-color] delay-0 duration-300 ease-in-out'
+                            className='relative group aspect-square w-full overflow-hidden mx-auto outline-3 outline-offset-[calc(var(--spacing)*1)] outline-transparent hover:outline-(--foreground-primary) focus:outline-(--foreground-primary) transition-[outline-color] duration-300 ease-in-out'
                         >
                             <Image
                                 src={"/images/" + item.thumbnail}
@@ -42,6 +42,13 @@ const ProjectOverview: FC = () => {
                                 <h4 className='opacity-100 wrap-anywhere'>
                                     {item.title}
                                 </h4>
+                                <div className='inline-block'>
+                                    {item.tags.map((tag, j) => {
+                                        return (
+                                            <span key={tag + i + j} className='mx-1 first:ml-0 last:mr-0 p-1 text-xs text-(--project-text) bg-black rounded-full'>{tag}</span>
+                                        );
+                                    })}
+                                </div>
                                 <hr className={`my-2 ${detailHoverFade} ${detailTransitionProps}`}></hr>
                                 <p className={`text-sm ${detailHoverFade} ${detailTransitionProps}`}>
                                     {new Date(item.date).toLocaleDateString()}

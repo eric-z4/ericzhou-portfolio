@@ -5,7 +5,7 @@ import { useMDXComponents as getMDXComponents } from '../../mdx-components';
 
 const { wrapper: Wrapper } = getMDXComponents()
 
-const baseFilePath = "../_projects/"
+const baseFilePath = "../_projects/_mdxpages/"
 
 export async function generateMetadata({ params }: { params: { slug: string; }; }): Promise<Metadata> {
     const { slug } = await params;

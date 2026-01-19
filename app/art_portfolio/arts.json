@@ -1,0 +1,28 @@
+{
+  "artworks": [
+    {
+      "name": "City Streets",
+      "image": "city_street.jpg"
+    },
+    {
+      "name": "Placeholder",
+      "image": "placeholder.png"
+    },
+    {
+      "name": "Skull",
+      "image": "skull.png"
+    },
+    {
+      "name": "City Streets",
+      "image": "city_street.jpg"
+    },
+    {
+      "name": "Placeholder",
+      "image": "placeholder.png"
+    },
+    {
+      "name": "Skull",
+      "image": "skull.png"
+    }
+  ]
+}
