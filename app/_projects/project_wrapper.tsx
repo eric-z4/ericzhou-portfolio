@@ -32,7 +32,7 @@ const ProjectOverview: FC = () => {
                         >
                             <Image
                                 src={"/images/" + item.thumbnail}
-                                alt=''
+                                alt={item.title}
                                 fill={true}
                                 loading="eager"
                                 sizes="80vw"

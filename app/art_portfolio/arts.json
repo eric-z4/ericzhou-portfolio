@@ -2,27 +2,45 @@
   "artworks": [
     {
       "name": "City Streets",
-      "image": "city_street.jpg"
+      "description": "Placeholder",
+      "image": "city_street.jpg",
+      "imageWidth": 800,
+      "imageHeight": 800
     },
     {
       "name": "Placeholder",
-      "image": "placeholder.png"
+      "description": "Placeholder",
+      "image": "placeholder.png",
+      "imageWidth": 1920,
+      "imageHeight": 1128
     },
     {
       "name": "Skull",
-      "image": "skull.png"
+      "description": "Placeholder",
+      "image": "skull.png",
+      "imageWidth": 396,
+      "imageHeight": 387
     },
     {
       "name": "City Streets",
-      "image": "city_street.jpg"
+      "description": "Placeholder",
+      "image": "city_street.jpg",
+      "imageWidth": 800,
+      "imageHeight": 800
     },
     {
       "name": "Placeholder",
-      "image": "placeholder.png"
+      "description": "Placeholder",
+      "image": "placeholder.png",
+      "imageWidth": 1920,
+      "imageHeight": 1128
     },
     {
       "name": "Skull",
-      "image": "skull.png"
+      "description": "Placeholder",
+      "image": "skull.png",
+      "imageWidth": 396,
+      "imageHeight": 387
     }
   ]
 }
