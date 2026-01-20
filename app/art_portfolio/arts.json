@@ -1,46 +1,46 @@
 {
   "artworks": [
     {
-      "name": "City Streets",
-      "description": "Placeholder",
-      "image": "city_street.jpg",
-      "imageWidth": 800,
-      "imageHeight": 800
+      "name": "Atmosphereic Igloos",
+      "description": "Created in Maya",
+      "image": "cold_atmosphere_igloos.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
     },
     {
-      "name": "Placeholder",
-      "description": "Placeholder",
-      "image": "placeholder.png",
+      "name": "Ferris Wheel",
+      "description": "Created in Maya",
+      "image": "ferris_wheel_shot.jpg",
       "imageWidth": 1920,
-      "imageHeight": 1128
+      "imageHeight": 1080
     },
     {
-      "name": "Skull",
-      "description": "Placeholder",
-      "image": "skull.png",
-      "imageWidth": 396,
-      "imageHeight": 387
+      "name": "UEFN Arcade Room",
+      "description": "Created in Unreal Engine for Fortnite",
+      "image": "UEFN_arcade.jpg",
+      "imageWidth": 1536,
+      "imageHeight": 835
     },
     {
-      "name": "City Streets",
-      "description": "Placeholder",
-      "image": "city_street.jpg",
-      "imageWidth": 800,
-      "imageHeight": 800
-    },
-    {
-      "name": "Placeholder",
-      "description": "Placeholder",
-      "image": "placeholder.png",
+      "name": "MAC | Robot Model",
+      "description": "Created with Maya and ZBrush",
+      "image": "MAC_Posing.jpg",
       "imageWidth": 1920,
-      "imageHeight": 1128
+      "imageHeight": 1080
     },
     {
-      "name": "Skull",
-      "description": "Placeholder",
-      "image": "skull.png",
-      "imageWidth": 396,
-      "imageHeight": 387
+      "name": "Model of a P51 Mustang",
+      "description": "Created in Maya",
+      "image": "P51_Mustang_Side.jpg",
+      "imageWidth": 960,
+      "imageHeight": 540
+    },
+    {
+      "name": "Charcoal Still Life",
+      "description": "Drawn with charcoal pencils",
+      "image": "charcoal_still_life.JPG",
+      "imageWidth": 1006,
+      "imageHeight": 1340
     }
   ]
 }

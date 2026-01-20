@@ -20,7 +20,7 @@ const ArtGallery: FC = () => {
                 style={{ opacity: cardVisibility ? 1 : 0, pointerEvents: cardVisibility ? 'auto' : 'none' }}
                 onClick={() => handleArtClick(-1)}
             >
-                <div className='fixed max-w-full md:max-w-3/4 xl:max-w-4/5 scale-[1.5] md:scale-[1.2] xl:scale-[1] p-2 md:p-4 rounded-md bg-(--midground) -translate-1/2 top-1/2 left-1/2'>
+                <div className='fixed max-w-full md:max-w-3/4 xl:max-w-4/5 p-2 md:p-4 rounded-md bg-(--midground) -translate-1/2 top-1/2 left-1/2'>
                     <Image
                         src={"/images/art_portfolio/" + artworks[cardImageIndex].image}
                         alt={artworks[cardImageIndex].name}
