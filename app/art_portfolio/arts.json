@@ -11,27 +11,44 @@
     {
       "name": "Ferris Wheel",
       "description": "Created in Maya",
-      "thumbnail": "ferris_wheel/ferris_wheel_shot.jpg",
+      "thumbnail": "ferris_wheel/Shot1.jpg",
       "thumbnailWidth": 1920,
       "thumbnailHeight": 1080,
       "carouselContent": [
         {
-          "name": "Ferris Wheel Shot 2",
-          "image": "ferris_wheel/Shot2.jpg",
+          "name": "Ferris Wheel Shot 1",
+          "route": "ferris_wheel/Shot1.jpg",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "type": "image"
+        },
+        {
+          "name": "Ferris Wheel Shot 2",
+          "route": "ferris_wheel/Shot2.jpg",
+          "width": 1920,
+          "height": 1080,
+          "type": "image"
         },
         {
           "name": "Ferris Wheel Shot 3",
-          "image": "ferris_wheel/Shot3.jpg",
+          "route": "ferris_wheel/Shot3.jpg",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "type": "image"
         },
         {
           "name": "Ferris Wheel Shot 4",
-          "image": "ferris_wheel/Shot4.jpg",
+          "route": "ferris_wheel/Shot4.jpg",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "type": "image"
+        },
+        {
+          "name": "Ferris Wheel Animation",
+          "route": "https://www.youtube.com/embed/12CeVZly-dA?si=rFmOVFGbtebB9a8L",
+          "width": 1920,
+          "height": 1080,
+          "type": "video"
         }
       ]
     },
@@ -57,14 +74,6 @@
       "thumbnail": "P51_Mustang_Side.jpg",
       "thumbnailWidth": 960,
       "thumbnailHeight": 540,
-      "carouselContent": []
-    },
-    {
-      "name": "Still Life",
-      "description": "Created with charcoal pencils",
-      "thumbnail": "charcoal_still_life.JPG",
-      "thumbnailWidth": 1006,
-      "thumbnailHeight": 1340,
       "carouselContent": []
     }
   ]
