@@ -37,7 +37,7 @@ const ArtGallery: FC = () => {
             >
                 <div className='flex grow-1 bg-transparent basis-8'></div>
                 <div className='flex grow-10 bg-transparent basis-16'>
-                    <div className='w-4/5 mx-auto flex flex-col bg-(--midground) p-4'>
+                    <div className='w-full md:w-4/5 md:mx-auto flex flex-col bg-(--midground) p-4 rounded-md'>
                         <div className='w-full grow-8 flex basis-32 bg-blue-100 aspect-16/9 overflow-x-auto'>
                             <div className='flex shrink-0 h-full' style={{ flexBasis: `${Math.max(100 * artworks[cardImageIndex].carouselContent.length, 100)}%` }}>
                                 {artworks[cardImageIndex].carouselContent.length === 0 ?
@@ -60,8 +60,9 @@ const ArtGallery: FC = () => {
                                 })}
                             </div>
                         </div>
-                        <div className='w-full shrink-0 basis-24 bg-blue-200'>
-
+                        <div className='w-full shrink-0 basis-fit bg-transparent'>
+                            <h2>{artworks[cardImageIndex].name}</h2>
+                            <p>{artworks[cardImageIndex].description}</p>
                         </div>
                     </div>
                 </div>
@@ -69,7 +70,7 @@ const ArtGallery: FC = () => {
             </div>
             {artworks.map((item, i) => {
                 return (
-                    <div key={item.name + i} className="inline-block mb-2 cursor-zoom-in" onClick={() => handleArtClick(i)}>
+                    <div key={item.name + i} className="inline-block relative mb-2 cursor-zoom-in" onClick={() => handleArtClick(i)}>
                         <Image
                             src={"/images/art_portfolio/" + item.thumbnail}
                             alt={item.name}
@@ -77,6 +78,10 @@ const ArtGallery: FC = () => {
                             height={item.thumbnailHeight}
                             loading="eager"
                         />
+                        {item.carouselContent.length > 0 ?
+                            <div className='absolute bg-black/40 size-8 right-2 bottom-2 rounded-full'></div> :
+                            <></>
+                        }
                     </div>
                 )
             })}

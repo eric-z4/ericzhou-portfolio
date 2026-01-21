@@ -4,6 +4,9 @@ import { Footer } from './footer';
 import { Navbar } from './navbar';
 import { Sidepanel } from './sidepanel';
 
+const SideMargin: FC = () => {
+    return (<div className='hidden xl:flex basis-(--sidebar-basis) bg-none'></div>);
+}
 
 export const NextraTheme: FC<{
     children: ReactNode;
@@ -12,7 +15,7 @@ export const NextraTheme: FC<{
     return (
         <div className='flex min-h-dvh h-auto basis-full'>
             <Sidepanel />
-            <div className='hidden xl:flex basis-(--sidebar-basis) bg-none'></div>
+            <SideMargin />
             <div className='flex flex-col xl:basis-(--main-basis) basis-full'>
                 <Navbar pageMap={pageMap} />
                 <div className='flex grow py-2 bg-(--background-main) px-(--outer-padding)'>
@@ -20,7 +23,7 @@ export const NextraTheme: FC<{
                 </div>
                 <Footer />
             </div>
-            <div className='hidden xl:flex basis-(--sidebar-basis) bg-none'></div>
+            <SideMargin />
         </div>
     );
 };
