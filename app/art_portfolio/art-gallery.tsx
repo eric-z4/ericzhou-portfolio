@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, type FC } from 'react';
-import { BsPlusLg } from "react-icons/bs";
+import { useState, useRef, useEffect, type FC } from 'react';
+import { BsCollectionFill, BsFillCaretRightSquareFill } from "react-icons/bs";
 import Image from 'next/image';
 import { artworks } from './arts.json';
 
@@ -11,7 +11,7 @@ const CarouselVideo: FC<{ id: string, videoRoute: string, videoName: string, vid
             <iframe
                 width={videoWidth}
                 height={videoHeight}
-                src={`${videoRoute};controls=0`}
+                src={`${videoRoute}`}
                 title={videoName}
                 className='w-full h-full object-contain bg-transparent'
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -40,15 +40,25 @@ const ArtGallery: FC = () => {
     const [cardImageIndex, setCardImageIndex] = useState(0);
     const [carouselIndex, setCarouselIndex] = useState(0);
     const [cardVisibility, setCardVisibility] = useState(false);
+    const content = useRef(artworks[cardImageIndex].carouselContent);
 
-    function handleArtClick(index : number) {
+    useEffect(() => {
+        if (content.current.length > 0) {
+            document.getElementById(content.current[carouselIndex].name + carouselIndex)?.scrollIntoView();
+        }
+    }, [carouselIndex])
+
+    function handleArtClick(index: number) {
         setCardVisibility(!cardVisibility);
         setCardImageIndex(index < 0 ? cardImageIndex : index);
+        if (index >= 0 && index !== cardImageIndex) {
+            content.current = artworks[index].carouselContent;
+            setCarouselIndex(0);
+        }
     }
 
-    function handleScrollClick(contentNames: string[], index: number) {
-        if (contentNames.length > 0 && index >= 0 && index < contentNames.length) {
-            document.getElementById(contentNames[index] + index)?.scrollIntoView();
+    function handleScrollClick(index: number) {
+        if (index >= 0 && index < content.current.length) {
             setCarouselIndex(index);
         }
     }
@@ -64,7 +74,7 @@ const ArtGallery: FC = () => {
                     <div className='flex grow-1 bg-transparent basis-0 md:basis-8' onClick={() => handleArtClick(-1)}></div>
                     <div className='flex flex-col grow-1 basis-full md:basis-4/5 bg-(--midground) p-4 rounded-md'>
                         <div
-                            className='w-full grow-8 flex basis-32 bg-zinc-800 aspect-16/9 overflow-x-scroll snap-x snap-mandatory scroll-smooth'
+                            className='w-full grow-8 flex basis-32 bg-(--background-main) aspect-16/9 overflow-x-scroll snap-x snap-mandatory scroll-smooth'
                             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                         >
                             {artworks[cardImageIndex].carouselContent.length === 0 ?
@@ -97,14 +107,35 @@ const ArtGallery: FC = () => {
                             })}
                         </div>
                         <div className='w-full shrink-0 basis-fit bg-transparent'>
+                            {artworks[cardImageIndex].carouselContent.length === 0 ? <></> :
+                                <div className='flex'>
+                                    <button className='grow-8 bg-(--midground) text-left border-(--background-main) border-2 rounded-bl-lg active:bg-(--background)' onClick={() => handleScrollClick(carouselIndex - 1)}>
+                                        <p className='text-(--foreground-primary) text-lg text-center'>&lt;&lt;</p>
+                                    </button>
+                                    <div className='flex justify-center items-center gap-2 grow-1 bg-(--midground) border-(--background-main) border-2'>
+                                        {artworks[cardImageIndex].carouselContent.map((item, i) => {
+                                            return (
+                                                <div
+                                                    key={item.name + i}
+                                                    className='inline-block size-2 flex-none rounded-full transition-[scale, background-color, color] duration-300'
+                                                    style={{
+                                                        scale: carouselIndex === i ? 1.5 : 1,
+                                                        backgroundColor: item.type === 'image' ? carouselIndex === i ? 'var(--foreground-primary)' : 'var(--foreground-base)' : "#0000",
+                                                        color: carouselIndex === i ? 'var(--foreground-primary)' : 'var(--foreground-base)'
+                                                    }}
+                                                >
+                                                    {item.type === 'video' ? <BsFillCaretRightSquareFill className='scale-80 -translate-1/4' /> : <></>}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                    <button className='grow-8 bg-(--midground) text-right border-(--background-main) border-2 rounded-br-lg active:bg-(--background)' onClick={() => handleScrollClick(carouselIndex + 1)}>
+                                        <p className='text-(--foreground-primary) text-lg text-center'>&gt;&gt;</p>
+                                    </button>
+                                </div>
+                            }
                             <h2>{artworks[cardImageIndex].name}</h2>
                             <p>{artworks[cardImageIndex].description}</p>
-                            <div className='bg-red-800' onClick={() => handleScrollClick(artworks[cardImageIndex].carouselContent.map(item => item.name), carouselIndex - 1)}>
-                                &lt;
-                            </div>
-                            <div className='bg-blue-800' onClick={() => handleScrollClick(artworks[cardImageIndex].carouselContent.map(item => item.name), carouselIndex + 1)}>
-                                &gt;
-                            </div>
                         </div>
                     </div>
                     <div className='flex grow-1 bg-transparent basis-0 md:basis-8' onClick={() => handleArtClick(-1)}></div>
@@ -123,7 +154,7 @@ const ArtGallery: FC = () => {
                         />
                         {item.carouselContent.length > 0 ?
                             <div className='absolute bg-black/40 size-8 right-2 bottom-2 rounded-full'>
-                                <BsPlusLg className='mx-auto h-full' />
+                                <BsCollectionFill className='mx-auto h-full' />
                             </div> :
                             <></>
                         }

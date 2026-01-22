@@ -3,10 +3,32 @@
     {
       "name": "Atmosphereic Igloos",
       "description": "Created in Maya",
-      "thumbnail": "cold_atmosphere_igloos.jpg",
+      "thumbnail": "igloos/cold_atmosphere_igloos.jpg",
       "thumbnailWidth": 1280,
       "thumbnailHeight": 720,
-      "carouselContent": []
+      "carouselContent": [
+        {
+          "name": "Cold Atmosphere",
+          "route": "igloos/cold_atmosphere_igloos.jpg",
+          "width": 1280,
+          "height": 720,
+          "type": "image"
+        },
+        {
+          "name": "Dark Atmosphere",
+          "route": "igloos/dark_and_lights_igloos.jpg",
+          "width": 1280,
+          "height": 720,
+          "type": "image"
+        },
+        {
+          "name": "Depth",
+          "route": "igloos/depth_igloos.jpg",
+          "width": 1280,
+          "height": 720,
+          "type": "image"
+        }
+      ]
     },
     {
       "name": "Ferris Wheel",
@@ -45,7 +67,7 @@
         },
         {
           "name": "Ferris Wheel Animation",
-          "route": "https://www.youtube.com/embed/12CeVZly-dA?si=rFmOVFGbtebB9a8L",
+          "route": "https://www.youtube.com/embed/12CeVZly-dA?si=lAdCsIepocinnRrK",
           "width": 1920,
           "height": 1080,
           "type": "video"
@@ -55,10 +77,46 @@
     {
       "name": "UEFN Arcade Room",
       "description": "Created in Unreal Engine for Fortnite",
-      "thumbnail": "UEFN_arcade.jpg",
+      "thumbnail": "UEFN_arcade/UEFN_arcade_Shot1.jpg",
       "thumbnailWidth": 1536,
       "thumbnailHeight": 835,
-      "carouselContent": []
+      "carouselContent": [
+        {
+          "name": "UEFN Arcade Room Shot1",
+          "route": "UEFN_arcade/UEFN_arcade_Shot1.jpg",
+          "width": 1536,
+          "height": 835,
+          "type": "image"
+        },
+        {
+          "name": "UEFN Arcade Room Shot2",
+          "route": "UEFN_arcade/UEFN_arcade_Shot2.jpg",
+          "width": 1536,
+          "height": 835,
+          "type": "image"
+        },
+        {
+          "name": "UEFN Arcade Room Shot3",
+          "route": "UEFN_arcade/UEFN_arcade_Shot3.jpg",
+          "width": 1536,
+          "height": 835,
+          "type": "image"
+        },
+        {
+          "name": "UEFN Arcade Room Shot4",
+          "route": "UEFN_arcade/UEFN_arcade_Shot4.jpg",
+          "width": 1536,
+          "height": 835,
+          "type": "image"
+        },
+        {
+          "name": "UEFN Arcade Room Animation",
+          "route": "https://www.youtube.com/embed/M7b0nNzEtiU?si=8Dyo1tzOQxAk1OP2",
+          "width": 1920,
+          "height": 1080,
+          "type": "video"
+        }
+      ]
     },
     {
       "name": "MAC | Robot Model",
