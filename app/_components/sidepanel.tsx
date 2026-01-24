@@ -3,7 +3,7 @@
 import { useState, type FC } from 'react';
 import { themes } from '../_themes/themes.json';
 
-const circularDiv: string = "flex aspect-square rounded-full relative";
+const circularDiv: string = "basis-10 rounded-full relative";
 const circularInput: string = "absolute inset-0 m-0 rounded-full appearance-none bg-transparent cursor-pointer";
 const borderDiv: string = "border-2 border-black";
 const borderInput: string = "opacity-0 checked:opacity-100 hover:not-checked:opacity-100 border-2 border-(--foreground-primary) checked:border-y-(--foreground-primary) checked:border-x-transparent transition-opacity duration-400";
