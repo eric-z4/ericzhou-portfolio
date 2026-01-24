@@ -4,7 +4,7 @@ import { useState, type FC } from 'react';
 import { themes } from '../_themes/themes.json';
 
 const circularDiv: string = "flex aspect-square rounded-full relative";
-const circularInput: string = "flex flex-none m-0 aspect-square rounded-full appearance-none bg-transparent cursor-pointer";
+const circularInput: string = "absolute inset-0 m-0 rounded-full appearance-none bg-transparent cursor-pointer";
 const borderDiv: string = "border-2 border-black";
 const borderInput: string = "opacity-0 checked:opacity-100 hover:not-checked:opacity-100 border-2 border-(--foreground-primary) checked:border-y-(--foreground-primary) checked:border-x-transparent transition-opacity duration-400";
 const tooltipClass: string = "absolute w-max p-1 top-1/2 left-[125%] -translate-y-1/2 bg-black rounded-sm text-sm select-none";
