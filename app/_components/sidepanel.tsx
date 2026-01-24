@@ -4,7 +4,7 @@ import { useState, type FC } from 'react';
 import { themes } from '../_themes/themes.json';
 
 const circularDiv: string = "flex aspect-square rounded-full relative";
-const circularInput: string = "w-full m-0 aspect-square rounded-full appearance-none cursor-pointer";
+const circularInput: string = "flex flex-none m-0 aspect-square rounded-full appearance-none bg-transparent cursor-pointer";
 const borderDiv: string = "border-2 border-black";
 const borderInput: string = "opacity-0 checked:opacity-100 hover:not-checked:opacity-100 border-2 border-(--foreground-primary) checked:border-y-(--foreground-primary) checked:border-x-transparent transition-opacity duration-400";
 const tooltipClass: string = "absolute w-max p-1 top-1/2 left-[125%] -translate-y-1/2 bg-black rounded-sm text-sm select-none";
@@ -17,24 +17,14 @@ export const SidepanelThemeButton: FC<{ bg: string, themeName: string, tooltip: 
 
     return (
         <div className={`${circularDiv} ${borderDiv} ${bg}`}>
-            {themeName === "" ? (
-                <input
-                    type='radio'
-                    name='themeRadio'
-                    className={`${circularInput} ${borderInput} checked:animate-slow-spin peer`}
-                    onClick={() => handleThemeChangeClick(themeName)}
-                    defaultChecked={true}
-                >     
-                </input>
-            ) : (
-                <input
-                    type='radio'
-                    name='themeRadio'
-                    className={`${circularInput} ${borderInput} checked:animate-slow-spin peer`}
-                    onClick={() => handleThemeChangeClick(themeName)}
-                >
-                </input>
-            )}
+            <input
+                type='radio'
+                name='themeRadio'
+                className={`${circularInput} ${borderInput} checked:animate-slow-spin peer`}
+                onClick={() => handleThemeChangeClick(themeName)}
+                defaultChecked={themeName === "" ? true : false}
+            >     
+            </input>
             <div className={`${tooltipClass} ${tooltipArrow} text-white opacity-0 hover:opacity-80 transition-opacity duration-300 ease-in-out pointer-events-none ${toggleTooltip}`}>
                 {tooltip}
             </div>
