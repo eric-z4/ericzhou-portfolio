@@ -28,8 +28,8 @@ const ArtCarousel: FC<{ artIndex: number, isVisible: boolean; setVisible: Dispat
 
     return (
         <div className='fixed z-1 inset-0 bg-black/50 backdrop-blur-xs transition-opacity duration-300 ease-in-out' style={{ opacity: isVisible ? 1 : 0, pointerEvents: isVisible ? 'auto' : 'none' }}>
-            <div className='fixed inset-0' onClick={() => { setVisible(false); setCarousel(0) }}></div>
-            <div className='fixed inset-x-0 md:inset-x-32 inset-y-27 flex flex-col py-4 md:px-4 bg-(--midground) rounded-md'>
+            <div className='fixed inset-0 cursor-zoom-out' onClick={() => { setVisible(false); setCarousel(0) }}></div>
+            <div className='fixed inset-x-0 md:inset-x-32 inset-y-18 md:inset-y-27 flex flex-col py-4 md:px-4 bg-(--midground) rounded-md'>
                 <div
                     id='carousel-scroll-box'
                     className='flex flex-initial basis-7/8 max-h-7/8 bg-(--background-main) overflow-x-scroll snap-x snap-mandatory scroll-smooth touch-none'
@@ -52,16 +52,16 @@ const ArtCarousel: FC<{ artIndex: number, isVisible: boolean; setVisible: Dispat
                         })
                     }
                 </div>
-                <div className='px-4 md:px-0 basis-1/8 bg-(--midground)'>
+                <div className='basis-1/8 bg-(--midground)'>
                     {artworks[artIndex].carouselContent.length === 0 ? <></> :
                         <div className='flex'>
-                            <button className='basis-4/10 border-2 border-(--background-main) rounded-bl-md' onClick={() => shiftCarousel(-1)}>&lt;&lt;</button>
+                            <button className='basis-4/10 border-2 border-(--background-main) text-(--foreground-primary) rounded-bl-md cursor-pointer hover:bg-(--background) active:bg-(--background-main)' onClick={() => shiftCarousel(-1)}>&lt;&lt;</button>
                             <div className='flex justify-center items-center basis-2/10 gap-1 border-2 border-(--background-main)'>
                                 {artworks[artIndex].carouselContent.map((item, i) => {
                                     return (
                                         <i
                                             key={item.name + i}
-                                            className={`bi ${item.type === 'image' ? 'bi-circle-fill' : 'bi-caret-right-square-fill'}`}
+                                            className={`bi ${item.type === 'image' ? 'bi-circle-fill' : 'bi-caret-right-square-fill'} transition-[scale, color] duration-300 ease-in-out`}
                                             style={scrollPos === i ? {
                                                 scale: 1,
                                                 color: 'var(--foreground-primary)'
@@ -73,11 +73,13 @@ const ArtCarousel: FC<{ artIndex: number, isVisible: boolean; setVisible: Dispat
                                     );
                                 })}
                             </div>
-                            <button className='basis-4/10 border-2 border-(--background-main) rounded-br-md' onClick={() => shiftCarousel(1)}>&gt;&gt;</button>
+                            <button className='basis-4/10 border-2 border-(--background-main) text-(--foreground-primary) rounded-br-md cursor-pointer hover:bg-(--background) active:bg-(--background-main)' onClick={() => shiftCarousel(1)}>&gt;&gt;</button>
                         </div>
                     }
-                    <h2>{artworks[artIndex].name}</h2>
-                    <p>{artworks[artIndex].description}</p>
+                    <div className='mx-4 md:mx-0'>
+                        <h2>{artworks[artIndex].name}</h2>
+                        <p>{artworks[artIndex].description}</p>
+                    </div>
                 </div>
             </div>
         </div>

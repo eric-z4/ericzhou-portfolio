@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const ArtCarouselImage: FC<{ content: { name: string, route: string, width: number, height: number }; }> = ({ content }) => {
     return (
-        <div id={content.route} className='flex flex-none basis-full'>
+        <div id={content.route} className='flex flex-none basis-full h-full snap-always snap-center'>
             <Suspense fallback={<p>Loading...</p>}>
                 <Image
                     src={"/images/art_portfolio/" + content.route}
@@ -11,7 +11,7 @@ const ArtCarouselImage: FC<{ content: { name: string, route: string, width: numb
                     width={content.width}
                     height={content.height}
                     loading="lazy"
-                    className='object-contain mx-auto snap-always snap-center'
+                    className='object-contain mx-auto'
                 />
             </Suspense>
         </div>

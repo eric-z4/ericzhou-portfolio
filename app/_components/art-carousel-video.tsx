@@ -2,7 +2,7 @@ import { Suspense, type FC } from 'react';
 
 const ArtCarouselVideo: FC<{ content: { name: string, route: string, width: number, height: number; }; }> = ({ content }) => {
     return (
-        <div id={content.route} className='relative flex flex-none basis-full snap-always snap-center'>
+        <div id={content.route} className='relative flex flex-none basis-full h-full snap-always snap-center'>
             <Suspense fallback={<p>Loading...</p>}>
                 <iframe
                     width={content.width}
