@@ -43,9 +43,9 @@ export const Navbar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
                     {topLevelNavbarItems.map(item => {
                         const route = item.route || ('href' in item ? item.href! : '');
                         return (
-                            <li key={route}>
-                                {pathname == route ?
-                                    <Link href={route} className='no-underline opacity-100 text-(--foreground-primary)'>
+                            <li key={route} className={`p-2 rounded-sm ${pathname === route ? 'bg-(--foreground-primary)' : ''}`}>
+                                {pathname === route ?
+                                    <Link href={route} className='no-underline opacity-100 text-(--foreground-base-contrast)'>
                                         {item.title}
                                     </Link> :
                                     <Link href={route} className='no-underline opacity-40 transition-opacity delay-0 duration-300 ease-in-out hover:opacity-100'>

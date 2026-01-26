@@ -3,11 +3,16 @@
     --background-main: #111113;
     --sidepanel-bg: #444444;
     --head-foot-bg: #212121;
-    --project-fade: #111113;
-    --project-text: #ededed;
     --midground: #373737;
     --foreground-primary: #b3ffc3;
     --foreground-base: #cecece;
+    --foreground-base-contrast: #282828;
+    --resume-bg: #27272a;
+    --resume-mg-1: #3f3f46;
+    --resume-mg-2: #2b2c2e;
+    --resume-mg-3: #18181b;
+    --resume-fg-base: #cecece;
+    --resume-fg-primary: #b3ffc3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,5 +24,12 @@
         --midground: #373737;
         --foreground-primary: #b3ffc3;
         --foreground-base: #cecece;
+        --foreground-base-contrast: #282828;
+        --resume-bg: #27272a;
+        --resume-mg-1: #3f3f46;
+        --resume-mg-2: #2b2c2e;
+        --resume-mg-3: #18181b;
+        --resume-fg-base: #cecece;
+        --resume-fg-primary: #b3ffc3;
     }
 }

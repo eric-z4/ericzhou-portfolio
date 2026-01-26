@@ -24,7 +24,7 @@ const ArtGallery: FC = () => {
                         />
                         {item.carouselContent.length > 0 ?
                             <div className='absolute bg-black/40 size-8 right-2 bottom-2 rounded-full'>
-                                <i className='bi bi-collection-fill inline-block w-full h-full text-center align-sub scale-90'></i>
+                                <i className='bi bi-collection-fill inline-block w-full h-full text-center align-sub scale-90 text-(--project-text)'></i>
                             </div> :
                             <></>
                         }

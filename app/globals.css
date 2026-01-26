@@ -15,8 +15,15 @@
     --project-fade: #111113;
     --project-text: #ededed;
     --midground: #b7b7b7;
-    --foreground-primary: #14600e;
+    --foreground-primary: #ffef00;
     --foreground-base: #282828;
+    --foreground-base-contrast: #282828;
+    --resume-bg: #fffffd;
+    --resume-mg-1: #f0edde;
+    --resume-mg-2: #cac3af;
+    --resume-mg-3: #a69c85;
+    --resume-fg-base: #282828;
+    --resume-fg-primary: #ffef00;
     --outer-padding: 1.25rem;
     --sidebar-basis: 10%;
     --main-basis: 80%;
@@ -38,6 +45,13 @@
         --midground: #373737;
         --foreground-primary: #b3ffc3;
         --foreground-base: #cecece;
+        --foreground-base-contrast: #282828;
+        --resume-bg: #27272a;
+        --resume-mg-1: #3f3f46;
+        --resume-mg-2: #2b2c2e;
+        --resume-mg-3: #18181b;
+        --resume-fg-base: #cecece;
+        --resume-fg-primary: #b3ffc3;
     }
 }
 
