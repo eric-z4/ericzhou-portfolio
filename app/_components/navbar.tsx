@@ -22,7 +22,7 @@ export const Navbar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
                 <input type='checkbox'
                     id='navMenuCheck'
                     name='navMenuCheck'
-                    className='absolute inset-0 scale-50 appearance-none bg-transparent cursor-pointer'
+                    className='absolute inset-0 w-full h-full scale-50 appearance-none bg-transparent cursor-pointer'
                 />
                 <i className='bi bi-list absolute inset-x-0 top-1/2 -translate-y-1/2 text-center text-4xl pointer-events-none' />
             </div> 
