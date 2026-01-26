@@ -14,7 +14,7 @@ export const Navbar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
     });
 
     return (
-        <div className='flex sticky top-0 z-1 items-center bg-(--head-foot-bg) px-(--outer-padding)'>
+        <div className='flex sticky top-0 z-1 items-center bg-(--head-foot-bg) px-(--outer-padding) select-none'>
             <h2 className='flex grow shrink-0 py-3 md:py-5 m-0'>
                 <Link href='/'>Eric Zhou</Link>
             </h2>
@@ -26,7 +26,7 @@ export const Navbar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
                 />
                 <i className='bi bi-list absolute inset-x-0 top-1/2 -translate-y-1/2 text-center text-4xl pointer-events-none' />
             </div> 
-            <div className='w-1/2 absolute right-4.5 top-2.5 px-5 py-3 bg-(--midground) invisible peer-has-checked:visible rounded-sm md:w-auto md:static md:top-0 md:px-0 md:pt-7 md:pb-3 md:flex md:bg-transparent md:visible'>
+            <div className='w-1/2 absolute right-4.5 top-2.5 px-5 py-3 bg-(--midground) rounded-sm invisible peer-has-checked:visible md:w-auto md:static md:top-0 md:px-0 md:pt-7 md:pb-3 md:flex md:bg-transparent md:visible'>
                 <div
                     className='block text-right cursor-pointer md:hidden'
                     onClick={() => {
@@ -60,17 +60,3 @@ export const Navbar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
         </div>
     );
 };
-
-//pathname == route ? (
-//    <li key={route}>
-//        <Link href={route} className='no-underline opacity-100 text-(--foreground-primary)'>
-//            {item.title}
-//        </Link>
-//    </li>
-//) : (
-//    <li key={route}>
-        //<Link href={route} className='no-underline opacity-40 transition-opacity delay-0 duration-300 ease-in-out hover:opacity-100'>
-        //    {item.title}
-        //</Link>
-//    </li>
-//);
