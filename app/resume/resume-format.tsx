@@ -16,13 +16,13 @@ const ContactBlock: FC<{className?: string}> = ({className=''}) => {
             <div>
                 <InlineIcon bicon='geo' />
                 <h4 className='inline'>
-                    {res.basics.location.city + ', ' + res.basics.location.region}
+                    {res.basics.location.city + ', ' + res.basics.location.region + " " + res.basics.location.postalCode}
                 </h4>
             </div>
             <div>
                 <InlineIcon bicon='house' />
                 <h4 className='inline'>
-                    <Link href={res.basics.url}>
+                    <Link href={res.basics.url} className='text-(--resume-fg-primary)'>
                         {res.basics.url}
                     </Link>
                 </h4>
@@ -33,7 +33,7 @@ const ContactBlock: FC<{className?: string}> = ({className=''}) => {
                         <div key={item.network + i}>
                             <InlineIcon bicon={item.network} />
                             <h4 className='inline'>
-                                <Link href={item.url}>
+                                <Link href={item.url} target="_blank" rel="noopener noreferrer" className='text-(--resume-fg-primary)'>
                                     {item.username}
                                 </Link>
                             </h4>
