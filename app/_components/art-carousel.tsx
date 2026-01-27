@@ -53,7 +53,7 @@ const ArtCarousel: FC<{ artIndex: number, isVisible: boolean; setVisible: Dispat
                     }
                 </div>
                 <div className='basis-1/8 bg-(--midground)'>
-                    {artworks[artIndex].carouselContent.length === 0 ? <></> :
+                    {artworks[artIndex].carouselContent.length <= 1 ? <></> :
                         <div className='flex'>
                             <button className='basis-4/10 border-2 border-(--background-main) text-(--foreground-primary) rounded-bl-md cursor-pointer hover:bg-(--background) active:bg-(--background-main)' onClick={() => shiftCarousel(-1)}>&lt;&lt;</button>
                             <div className='flex justify-center items-center basis-2/10 gap-1 border-2 border-(--background-main)'>

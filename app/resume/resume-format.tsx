@@ -14,6 +14,10 @@ const ContactBlock: FC<{className?: string}> = ({className=''}) => {
                 <h4 className='inline'>{res.basics.email}</h4>
             </div>
             <div>
+                <InlineIcon bicon='telephone' />
+                <h4 className='inline'>{res.basics.phone}</h4>
+            </div>
+            <div>
                 <InlineIcon bicon='geo' />
                 <h4 className='inline'>
                     {res.basics.location.city + ', ' + res.basics.location.region + " " + res.basics.location.postalCode}
@@ -148,7 +152,7 @@ const ResumeFormat: FC = () => {
     return (
         <div className='bg-(--resume-bg) *:p-6 my-3 grid grid-rows-[auto_1fr] grid-cols-3 *:text-(--resume-fg-base)'>
             <div className='col-span-2 bg-(--resume-mg-1)'>
-                <h1>{res.basics.name}</h1>
+                <h1 style={{ fontSize: '3.5rem' }}>{res.basics.name}</h1>
                 <h2>{res.basics.label}</h2>
             </div>
             <ContactBlock className='bg-(--resume-mg-3)' />

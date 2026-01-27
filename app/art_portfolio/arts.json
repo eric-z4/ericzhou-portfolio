@@ -127,12 +127,82 @@
       "carouselContent": []
     },
     {
-      "name": "Model of a P51 Mustang",
+      "name": "Toy Model of a P51 Mustang",
       "description": "Created in Maya",
-      "thumbnail": "P51_Mustang_Side.jpg",
+      "thumbnail": "P51/P51_Mustang_Side.jpg",
       "thumbnailWidth": 960,
       "thumbnailHeight": 540,
-      "carouselContent": []
+      "carouselContent": [
+        {
+          "name": "P51 Side View",
+          "route": "P51/P51_Mustang_Side.jpg",
+          "width": 960,
+          "height": 540,
+          "type": "image"
+        },
+        {
+          "name": "P51 Back View",
+          "route": "P51/P51_Mustang_Back.jpg",
+          "width": 960,
+          "height": 540,
+          "type": "image"
+        },
+        {
+          "name": "P51 Side View",
+          "route": "P51/P51_Mustang_Top.jpg",
+          "width": 960,
+          "height": 540,
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "name": "Demo Reel 2024",
+      "description": "Animations were created in Maya",
+      "thumbnail": "demo_reel_thumbnail.jpg",
+      "thumbnailWidth": 1537,
+      "thumbnailHeight": 864,
+      "carouselContent": [
+        {
+          "name": "Demo Reel 2024",
+          "route": "https://www.youtube.com/embed/A3B700pEC2g?si=KIuvKqdKks-CTBty",
+          "width": 1920,
+          "height": 1080,
+          "type": "video"
+        }
+      ]
+    },
+    {
+      "name": "Paper Snake",
+      "description": "Stop-motion animation made with Stop Motion (iOS app)",
+      "thumbnail": "paper_snake_thumbnail.jpg",
+      "thumbnailWidth": 1280,
+      "thumbnailHeight": 720,
+      "carouselContent": [
+        {
+          "name": "Paper Snake Video",
+          "route": "https://www.youtube.com/embed/jzr7O198NjY?si=aPQgE4eNTxt3t7y6",
+          "width": 1920,
+          "height": 1080,
+          "type": "video"
+        }
+      ]
+    },
+    {
+      "name": "The Reveal",
+      "description": "Flipbook animation made with Stop Motion (iOS app)",
+      "thumbnail": "The_Reveal_thumbnail.jpg",
+      "thumbnailWidth": 1280,
+      "thumbnailHeight": 720,
+      "carouselContent": [
+        {
+          "name": "The Reveal Video",
+          "route": "https://www.youtube.com/embed/FOiUFE5Lss8?si=RD09NJg16ztLu1Jy",
+          "width": 1920,
+          "height": 1080,
+          "type": "video"
+        }
+      ]
     }
   ]
 }
