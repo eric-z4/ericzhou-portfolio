@@ -2,8 +2,57 @@
 title: Hole in the Canoe
 ---
 
+import VideoComp from '../../_components/video_component.tsx';
+import ImageComp from '../../_components/image_component.tsx';
+import LinkComp from '../../_components/link_component.tsx';
+
 # Hole in the Canoe
 
-## Whooofjdiosfjao
+---
+<br />
 
-doaasdf
+<div className='flex h-80 gap-2'>
+	<ImageComp 
+		src='hole_in_the_canoe/hole-in-canoe-scene.jpg' 
+		alt='WIP Scene of Hole in the Canoe' 
+		className='flex grow-1 basis-full'
+	/>
+	<ImageComp 
+		src='hole_in_the_canoe/hole-in-canoe-walls.jpg' 
+		alt='WIP Walls of Hole in the Canoe' 
+		className='flex grow-1 basis-full'
+	/>
+</div>
+
+
+## About
+
+Hole in the Canoe is a game that I worked on with Aaron McLean and Rachel Tojio. This was an ICS 486 project assignment to make something for the <LinkComp src='https://cse.uhh.hawaii.edu/data_visualization/'>CyberCANOE</LinkComp> that was built in the renovated Keller 103 room. The CyberCANOE is an acronym for "Cyber Enabled Collaboration Analysis Navigation and Observation Environment." It is a display technology, developed by Jason Leigh and the <LinkComp src='https://www.lavaflow.info/about'>LAVA lab</LinkComp>, to enable people from different disciplines and campuses to collaborate on projects. The latest CyberCANOE is a single, large, ultra-resolution LED screen that features stereoscopic 3D.
+
+<br />
+See below for a video of Hole in the Canoe and the CyberCANOE itself:
+<br />
+
+<VideoComp 
+	src='https://www.youtube.com/embed/ZNv7OoFFDDA?si=sZs9bjF_bBZMKQ6y' 
+	title='Video of Hole in the Canoe'
+	className='w-full h-auto aspect-video'
+/>
+<br />
+
+In this <LinkComp src='https://unity.com/products/unity-engine#engine-faq'>Unity</LinkComp> project, I was responsible for setting up the wall movement, wall spawner, score system, player projection, music & sound effects (found on <LinkComp src='https://freesound.org/'>Freesound</LinkComp> and <LinkComp src='https://opengameart.org/art-search-advanced?keys=&field_art_type_tid%5B%5D=12&sort_by=count&sort_order=DESC)'>OpenGameArt</LinkComp>, and collision behavior. The <LinkComp src='https://github.com/doctorspiffy/CC_CANOE/blob/main/CCinstructions2025-09-09.pdf'>CC project template</LinkComp> was used as a base, and to allow the project to utilize the stereoscopic 3D of the CyberCANOE. Vive tracking was eventually implemented to the CC project by Christian Siador, who is a graduate research assistant in the LAVA lab, which was used to control the hands and head of the player.
+
+## Experience
+
+Working with a 3D display was a new experience for me because I was not able to view my project in 3D without the CyberCANOE and 3D glasses.
+<br />
+
+Below is what is shown while playing the game in the Unity Editor at home:
+
+<ImageComp 
+	src='hole_in_the_canoe/hole-canoe-game-over.jpg'
+	alt='Stereoscopic 3D of Hole in the Canoe game over screen' 
+	className='w-full h-auto aspect-video'
+/>
+
+While I could use the <LinkComp src='https://www.kula3d.com/how-to-use-the-cross-eyed-method'>cross-eye method</LinkComp> to (sort of) view the game in 3D, I could not test the player's movements without the vive trackers. This resulted in the walls being too low, which made the poses awkward or impossible to do (as seen in the above video). Let this be a lesson to myself to test things on the target platform more often.
