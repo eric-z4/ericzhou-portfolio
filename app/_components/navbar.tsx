@@ -28,7 +28,7 @@ export const Navbar: FC<{ pageMap: PageMapItem[]; }> = ({ pageMap }) => {
             </div> 
             <div className='w-1/2 absolute right-4.5 top-2.5 px-5 py-3 bg-(--midground) rounded-sm invisible peer-has-checked:visible md:w-auto md:static md:top-0 md:px-0 md:pt-7 md:pb-3 md:flex md:bg-transparent md:visible'>
                 <div
-                    className='block text-right cursor-pointer md:hidden'
+                    className='block mb-2 text-right cursor-pointer md:hidden'
                     onClick={() => {
                         const checkbox = document.getElementById('navMenuCheck') as HTMLInputElement;
                         if (checkbox !== null) {
