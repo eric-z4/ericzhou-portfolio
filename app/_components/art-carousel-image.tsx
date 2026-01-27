@@ -11,7 +11,7 @@ const ArtCarouselImage: FC<{ content: { name: string, route: string, width: numb
                     width={content.width}
                     height={content.height}
                     loading="lazy"
-                    className='object-contain mx-auto'
+                    className='object-contain mx-auto max-h-full'
                 />
             </Suspense>
         </div>
