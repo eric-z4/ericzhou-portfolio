@@ -2,8 +2,27 @@
 title: GradGraph
 ---
 
+import ImageComp from '../../_components/image_component.tsx';
+import LinkComp from '../../_components/link_component.tsx';
+
 # GradGraph
 
-### Graduation Stuff
+---
+<br />
 
-Ipsum
+<ImageComp 
+	src='gradgraph/gradgraph.jpg'
+	alt='Screenshot of GradGraph website'
+	className='w-3/4 h-auto mx-auto aspect-video'
+/>
+
+## About
+
+<LinkComp src='https://gradgraph.vercel.app/'>GradGraph</LinkComp> is a website that visualizes the number of degrees awarded by fiscal year, campus, degree type, and academic group via various charts using <LinkComp src='https://echarts.apache.org/en/index.html'>Apache ECharts</LinkComp> and <LinkComp src='https://plotly.com/javascript/'>Plotly.js</LinkComp>. The data that was used is a CSV file that is available on <LinkComp src='https://opendata.hawaii.gov/dataset/university-of-hawaii-student-degrees-awarded/resource/3a0b8368-71a7-4402-b9c7-9fc5a398a952'>Hawaii Open Data</LinkComp>, which was filtered to focus on three UH campuses: UH Manoa, UH West O`ahu and UH Hilo. This website was created in collaboration with Adam Graham and Jaren Pinera as a project assignment for ICS 484. I was responsible for the sankey diagram, the website layout, and some of the CSS styling. 
+
+## Experience
+
+This was my first time using several different tools and libraries. Other than Apache ECharts and Plotly, <LinkComp src='https://nextjs.org/'>Next.js</LinkComp> was used as the framework for the website, which was deployed on <LinkComp src='https://vercel.com/docs'>Vercel</LinkComp>. Additionally, I also used <LinkComp src='https://d3js.org/'>d3js</LinkComp> to parse the CSV and generate the colors seen on the sankey. 
+<br />
+
+Source: <a href="https://github.com/eric-z4/gradgraph"><i className="bi bi-github" /> eric-z4/gradgraph</a>

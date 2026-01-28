@@ -2,6 +2,41 @@
 title: Talking Hands
 ---
 
+import VideoComp from '../../_components/video_component.tsx';
+import ImageComp from '../../_components/image_component.tsx';
+import LinkComp from '../../_components/link_component.tsx';
+
 # Talking Hands
 
-American Sign Language
+---
+<br />
+
+<VideoComp
+	src='https://www.youtube.com/embed/eyJ_Rgv7Yoc?si=4aAIhKALLQfpo5FT' 
+	title='Video of Talking Hands'
+	className='w-3/4 h-auto mx-auto aspect-video'
+/>
+
+## About
+
+Talking Hands is a augmented reality app prototype that allows the user to type using the American sign language (ASL) alphabet. Aaron McLean, Rachel Tojio, and I worked on this project for a ICS 486 XR/AR assignment using <LinkComp src='https://developers.meta.com/horizon/documentation/unity/unity-sdks-overview/'>Meta XR SDKs for Unity</LinkComp> and the Meta Quest 3/3S. The project also included the <LinkComp src='https://docs.unity3d.com/Packages/com.unity.xr.hands@1.4/manual/index.html'>XR Hands package</LinkComp>, which provided the hand model, the hand joint tracker (the UI with the bars), and the ability to trigger events via hand gestures. Using XR Hands, I created the gestures for most of the alphabet (except for J and Z) and made them write their letter to the text box in front of the user. In addition, I implemented the "palm up" menu for deleting letters or adding a space.
+<br />
+
+<div className='flex h-80 gap-2'>
+	<ImageComp src='talking_hands/textbox.jpg' alt='Talking Hands Buttons UI' className='flex grow-1 basis-full' />
+	<ImageComp src='talking_hands/UI_Bubble_Buttons.jpg' alt='Talking Hands Buttons UI' className='flex grow-1 basis-full' />
+</div>
+<br />
+
+The limited hand tracking of the Quest 3/3S made it difficult to implement certain letters in the <LinkComp src='https://www.handspeak.com/learn/408/'>ASL alphabet</LinkComp>, such as R, U, M, and N. The headset could not track the crossed fingers for R, which made it seem like a U. This was resolved by having a collider appear behind the hand to let the user clarify which letter they are signing (see video below). The headset also could not track fingers that were obscured by the hand, especially for M and N. My group and I thought of tweaking the gestures to something that can be tracked more reliably and still be recognized as M or N. We decided to use the <LinkComp src='https://www.handspeak.com/word/a/alp/alphabet-1923.jpg'>old signs</LinkComp> for M and N instead, which was marginally better for tracking.
+<br />
+
+<VideoComp
+	src='https://www.youtube.com/embed/89HnH1f9Tqg?si=LsPSiS7_-b8_VHPY'
+	title='Video of signing R and U in Talking Hands'
+	className='w-3/4 h-auto mx-auto aspect-video'
+/>
+
+## Experience
+
+This was my first time programming something for virtual/augmented reality and using a VR headset. Unlike a 2D screen, I was able to see how close or far an object is and physically move around them. This made setting up the UI interesting since it can not be too close to the user's face, but still appear over other objects in the scene. The Quest 3/3S hand tracking was also interesting to work with. Instead of keys presses and mouse clicks, I can use hand poses and motion to interact with the application.

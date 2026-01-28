@@ -22,7 +22,7 @@
       "route": "gradgraph",
       "date": "2025-10-24",
       "description": "A website that visualizes the awarded degree trends and breakdown of three University of Hawaii (UH) campuses. The website utilizes charts from Apache ECharts and Plotly.js.",
-      "thumbnail": "gradgraph/gradgraph.png"
+      "thumbnail": "gradgraph/gradgraph.jpg"
     },
     {
       "title": "Talking Hands",
