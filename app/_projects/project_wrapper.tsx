@@ -50,7 +50,7 @@ const ProjectOverview: FC = () => {
     }
 
     return (
-        <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr py-5 gap-3'>
+        <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-3'>
             {projects.sort((a, b) => Date.parse(b.date) - Date.parse(a.date)).map((item, i) => {
                 return (
                     <Link key={item.title + i} href={'/' + item.route} onNavigate={(e) => handleNavigateClick(e, item.title, i)}>
