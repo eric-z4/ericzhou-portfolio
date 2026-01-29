@@ -1,5 +1,5 @@
 import { Dispatch, useState, useEffect, type FC } from 'react';
-import { artworks } from '../art_portfolio/arts.json';
+import { artworks } from '../_art_portfolio/arts.json';
 import ArtCarouselImage from './art-carousel-image';
 import ArtCarouselVideo from './art-carousel-video';
 
