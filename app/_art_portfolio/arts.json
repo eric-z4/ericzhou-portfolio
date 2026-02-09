@@ -174,7 +174,7 @@
     },
     {
       "name": "Paper Snake",
-      "description": "Stop-motion animation made with Stop Motion (iOS app)",
+      "description": "Stop-motion animation made with Stop Motion Studio (iOS app)",
       "thumbnail": "paper_snake_thumbnail.jpg",
       "thumbnailWidth": 1280,
       "thumbnailHeight": 720,
@@ -190,7 +190,7 @@
     },
     {
       "name": "The Reveal",
-      "description": "Flipbook animation made with Stop Motion (iOS app)",
+      "description": "Flipbook animation made with Stop Motion Studio (iOS app)",
       "thumbnail": "The_Reveal_thumbnail.jpg",
       "thumbnailWidth": 1280,
       "thumbnailHeight": 720,
